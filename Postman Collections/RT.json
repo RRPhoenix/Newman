@@ -10,6 +10,22 @@
 			"item": [
 				{
 					"name": "CreateUser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2f8cc15b-ed23-40b6-b569-d5bf4875ec6e",
+								"exec": [
+									"//@allure.id=3970\r",
+									"\r",
+									"pm.test(\"Status code is 201\", function(){\r",
+									"    pm.response.to.be.ok;\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "05567448-be42-4db9-bf2a-c5480896efff",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -44,6 +60,7 @@
 							"script": {
 								"id": "9d9fa668-7331-46a7-a5bf-c2292df586b1",
 								"exec": [
+									"//@allure.label.owner=RamyaT\r",
 									"pm.test(\"Status code is 201\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});"
